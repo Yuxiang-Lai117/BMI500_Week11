@@ -81,6 +81,7 @@ dR/dt = γ * I - μ * R
 ![β-γ heat maps](heatmap.png)
 
 **Experiment:** Sweep $\beta \in [0.1, 0.5] \times 10^{-3}$ (per person) and $\gamma \in [0.05, 0.2]$, simulate the SEIR model for 365 days, and record (i) peak infectious count and (ii) cumulative infections (via $\int \sigma E\,dt$).
+
 **Findings:**  
   - Higher β dramatically increases both peak load and annual cases; distancing/behavior policies target this axis.  
   - Higher γ shortens infectious periods, reducing peaks and total burden; medical treatments target this axis.  
