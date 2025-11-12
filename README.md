@@ -114,7 +114,7 @@ dR/dt = γ * I - μ * R
 ---
 
 ## AI Tool Disclosure
-Disclaimer: ChatGPT (OpenAI) was used to complete HW #1. to polish the narrative, sanity-check implementation details and debugging. I implemented main code, ran every simulation, generated the figures, and performed the analyses myself.
+Disclaimer: ChatGPT (OpenAI) was used to complete HW #1 to polish the narrative, implement evaluation, and debugging. I implemented the main code, conducted the simulation, generated the figures, and performed the analyses myself.
 
 **Example prompts:**  
 - “Help me make this paragraph sound more academic in markdown format.”  
