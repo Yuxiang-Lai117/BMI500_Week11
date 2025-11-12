@@ -34,7 +34,7 @@ dR/dt = γ * I - μ * R
 
 **Initial conditions:** $S(0)=999,\; I(0)=1,\; R(0)=0$, $\beta=0.3$, $\gamma=0.1$, $N=1000$.
 
-**Peak infection:** Day **38.4** with **300.8** concurrent infections (reported directly by the notebook).
+**Peak infection:** Day **38.4** with **300.8** concurrent infections (Results in Notebook).
 
 **Dynamics:** Susceptibles decline from 999 to ~700, recovereds rise to ~300, and infections form a single sharp wave. After the peak, herd immunity drives $R_0 < 1$, so infections decay rapidly.
 
