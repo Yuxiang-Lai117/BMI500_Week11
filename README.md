@@ -10,23 +10,19 @@
 
 ### Model definitions
 **SIR equations** (population counts, total population $N$):
-$$
-\begin{aligned}
-\frac{dS}{dt} &= -\beta \frac{SI}{N},\\
-\frac{dI}{dt} &= \beta \frac{SI}{N} - \gamma I,\\
-\frac{dR}{dt} &= \gamma I.
-\end{aligned}
-$$
+```
+dS/dt = -β * S * I / N
+dI/dt = β * S * I / N - γ * I
+dR/dt = γ * I
+```
 
-**SEIR with births and deaths** (adds exposed compartment $E$ and per-capita turnover $\mu$):
-$$
-\begin{aligned}
-\frac{dS}{dt} &= \mu N - \beta \frac{SI}{N} - \mu S,\\
-\frac{dE}{dt} &= \beta \frac{SI}{N} - (\sigma + \mu)E,\\
-\frac{dI}{dt} &= \sigma E - (\gamma + \mu)I,\\
-\frac{dR}{dt} &= \gamma I - \mu R.
-\end{aligned}
-$$
+**SEIR with births and deaths** (adds exposed compartment $E$ and per-capita turnover μ):
+```
+dS/dt = μ * N - β * S * I / N - μ * S
+dE/dt = β * S * I / N - (σ + μ) * E
+dI/dt = σ * E - (γ + μ) * I
+dR/dt = γ * I - μ * R
+```
 
 **Numerical solver.** I coded a reusable 4th-order Runge–Kutta integrator (`simulate_model`) with 0.1-day time steps for both models. Population conservation (S+I+R or S+E+I+R) stays within machine tolerance, validating the integrator. Because the equations divide by $N$, the transmission rate from the PDF ($\beta = 0.3 \times 10^{-3}$ with $N=1000$) is scaled to $\beta_{\text{eff}} = \beta \cdot N = 0.3$ inside the solver so that $R_0 = \beta_{\text{eff}}/\gamma = 3$.
 
@@ -124,3 +120,4 @@ Disclaimer: ChatGPT (OpenAI) was used to complete HW #1. to polish the narrative
 - “Help me make this paragraph sound more academic and concise.”  
 - “Check if my SEIR equations and plots are implemented correctly.”  
 - “Why does my simulation give negative values when μ is large?”
+
