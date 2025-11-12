@@ -10,19 +10,23 @@
 
 ### Model definitions
 **SIR equations** (population counts, total population $N$):
-\[
-\frac{dS}{dt} = -\beta \frac{SI}{N},\qquad
-\frac{dI}{dt} = \beta \frac{SI}{N} - \gamma I,\qquad
-\frac{dR}{dt} = \gamma I.
-\]
+$$
+\begin{aligned}
+\frac{dS}{dt} &= -\beta \frac{SI}{N},\\
+\frac{dI}{dt} &= \beta \frac{SI}{N} - \gamma I,\\
+\frac{dR}{dt} &= \gamma I.
+\end{aligned}
+$$
 
 **SEIR with births and deaths** (adds exposed compartment $E$ and per-capita turnover $\mu$):
-\[
-\frac{dS}{dt} = \mu N - \beta \frac{SI}{N} - \mu S,\qquad
-\frac{dE}{dt} = \beta \frac{SI}{N} - (\sigma + \mu)E,\qquad
-\frac{dI}{dt} = \sigma E - (\gamma + \mu)I,\qquad
-\frac{dR}{dt} = \gamma I - \mu R.
-\]
+$$
+\begin{aligned}
+\frac{dS}{dt} &= \mu N - \beta \frac{SI}{N} - \mu S,\\
+\frac{dE}{dt} &= \beta \frac{SI}{N} - (\sigma + \mu)E,\\
+\frac{dI}{dt} &= \sigma E - (\gamma + \mu)I,\\
+\frac{dR}{dt} &= \gamma I - \mu R.
+\end{aligned}
+$$
 
 **Numerical solver.** I coded a reusable 4th-order Runge–Kutta integrator (`simulate_model`) with 0.1-day time steps for both models. Population conservation (S+I+R or S+E+I+R) stays within machine tolerance, validating the integrator. Because the equations divide by $N$, the transmission rate from the PDF ($\beta = 0.3 \times 10^{-3}$ with $N=1000$) is scaled to $\beta_{\text{eff}} = \beta \cdot N = 0.3$ inside the solver so that $R_0 = \beta_{\text{eff}}/\gamma = 3$.
 
