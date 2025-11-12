@@ -95,12 +95,12 @@ This README is organized exactly like the homework prompt (parts A–E) so the g
 ---
 
 ## Rubric Compliance Checklist
-- **Methodology:** Exact equations from the prompt, validated RK4 solver, population conservation checks, explicit $R_0$ computation.
-- **Completeness:** All tasks A–E implemented; SEIR explored for both 365 and 1200 days; sensitivity grids cover the full parameter ranges requested.
-- **Documentation:** Notebook contains Markdown narration and comments; this README functions as a full report with equations, figures, and analyses.
-- **Adherence to guidelines:** Single-question submission, Markdown report, AI disclosure included, repository organized with required files.
-- **Novelty (bonus):** Added interpretable β–γ heat maps and long-horizon endemic analysis to go beyond the minimum spec.
-- **Critical analysis:** Detailed discussions of peaks, endemic waves, intervention levers, and limitations.
+**Methodology:** Exact equations from the prompt, validated RK4 solver, population conservation checks, explicit $R_0$ computation.
+**Completeness:** All tasks A–E implemented; SEIR explored for both 365 and 1200 days; sensitivity grids cover the full parameter ranges requested.
+**Documentation:** Notebook contains Markdown narration and comments; this README functions as a full report with equations, figures, and analyses.
+**Adherence to guidelines:** Single-question submission, Markdown report, AI disclosure included, repository organized with required files.
+**Novelty:** Added interpretable β–γ heat maps and long-horizon endemic analysis to go beyond the minimum spec.
+**Critical analysis:** Detailed discussions of peaks, endemic waves, intervention levers, and limitations.
 
 ---
 
@@ -112,7 +112,7 @@ This README is organized exactly like the homework prompt (parts A–E) so the g
 ---
 
 ## AI Tool Disclosure
-- Disclaimer: ChatGPT (OpenAI) was used to complete HW #1. to polish the narrative, sanity-check implementation details and debugging. I implemented main code, ran every simulation, generated the figures, and performed the analyses myself.
+Disclaimer: ChatGPT (OpenAI) was used to complete HW #1. to polish the narrative, sanity-check implementation details and debugging. I implemented main code, ran every simulation, generated the figures, and performed the analyses myself.
 
 **Example prompts:**  
 - “Help me make this paragraph sound more academic and concise.”  
