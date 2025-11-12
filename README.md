@@ -117,7 +117,7 @@ dR/dt = γ * I - μ * R
 Disclaimer: ChatGPT (OpenAI) was used to complete HW #1. to polish the narrative, sanity-check implementation details and debugging. I implemented main code, ran every simulation, generated the figures, and performed the analyses myself.
 
 **Example prompts:**  
-- “Help me make this paragraph sound more academic and concise.”  
+- “Help me make this paragraph sound more academic in markdown format.”  
 - “Check if my SEIR equations and plots are implemented correctly.”  
 - “Why does my simulation give negative values when μ is large?”
 
